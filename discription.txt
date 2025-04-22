@@ -1,0 +1,72 @@
+CUSTOMERS
+
+{GET}ALL                         http://localhost/garg/cus.php : All customer data in array of object {"ID","First_Name","Last_Name","number","Email","password","Address","City","State","Pincode",}
+
+{GET}ONE                         http://localhost/garg/cus.php?number=number : Customer data  having email as "number" in array of object {"ID","First_Name","Last_Name","number","Email","password","Address","City","State","Pincode",}
+
+{POST}New data                   http://localhost/garg/cus.php : {"fname","lname" ,"email","number","password","address","city","state","pincode"} Add data
+
+{PUT}Update by number            http://localhost/garg/cus.php : {"fname" , "lname" ,"email" , "number" , "password","address","city","state","pincode"}    Update data with number 
+
+EXAMPLE  {"fname":"ajay",
+"lname" :"sharma",
+"email":"Aja23466y@gmail.com",
+"number":"8514521452",
+"password":"ajaysharma",
+"address":"efgnjhgfds",
+"city":"Meerut",
+"state":"UP",
+"pincode":"1400"}
+
+********************************************************************************************************************************
+CLASSIFICATIONS
+
+{GET}ALL                         http://localhost/garg/classification.php    :   All classification {id,name}
+
+{POST}new                        http://localhost/garg/classification.php    :   Add new  {name}
+
+********************************************************************************************************************************
+CATEGERY
+
+{GET}ALL                         http://localhost/garg/categery.php    :   All CATEGERY{id,name,image,CID}
+
+{POST}ADD                        http://localhost/garg/categery.php    :   {id,name,image,CID}
+
+********************************************************************************************************************************
+PRODUCTS with {"ID","HSNCode","image","costprice","sellingPrice","MRP","qualityNo","gst","expire","image","available","category","priorty"}
+
+{GET}ALL                         http://localhost/garg/products.php    :   All products in array 
+
+{GET}One with ID                 http://localhost/garg/products.php?id='id'    :   product with id
+
+{GET}Some with category          http://localhost/garg/products.php?CID='id'    :   All product with category as id in array 
+
+{POST}One with ID                http://localhost/garg/products.php            :   Add any products
+
+{PUT}Some with category          http://localhost/garg/products.php            :   Update any products by ID
+
+********************************************************************************************************************************
+BILL 
+
+{GET} ALL                       http://localhost/garg/bill.php    :     All bills 
+
+{GET} Some                       http://localhost/garg/bill.php?cusId=id    :     All bills of customer id
+
+{GET} ONE                       http://localhost/garg/bill.php?billno=id    :    bill of bill id
+
+{POST}ADD                       http://localhost/garg/bill.php    :     add new {billDate,cusId,totalAmount,paymentMethod,paymentStatus,paymentDate}
+
+{PUT}Update                     http://localhost/garg/bill.php      :   update by billNo{billNo,cusID,totalAmount,paymentMethod,paymentStatus,paymentDate}
+
+********************************************************************************************************************************
+BILL ITEMS
+
+{GET} ALL                       http://localhost/garg/billitems.php    :     All bills items
+
+{GET} ONE                       http://localhost/garg/billitems.php?billno=id    :     All bills items with bill No
+
+{POST}ADD                       http://localhost/garg/billitems.php    :     add new {billno,productId,quantity,price,gst}
+
+{PUT}Update                     http://localhost/garg/billitems.php      :   update by ID{id,quantity,price,gst}
+
+{DELETE}remove                  http://localhost/garg/billitems.php      :   update by ID{id}
